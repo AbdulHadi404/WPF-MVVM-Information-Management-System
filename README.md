@@ -16,6 +16,27 @@ JDCLoginUI (Front-End Only) build on C# WPF using MVVM binding and the following
       <br />
       <em>Project Login Form</em>
     </td>
+       <td align="center">
+       <a href="https://www.flickr.com/photos/193485149@N02/51319690059/in/dateposted-public/" target="_blank" title="Admin">
+      <img src="https://live.staticflickr.com/65535/51319690059_7eef4f337b_k.jpg" alt="Admin">
+      </a>
+      <br />
+      <em>Project Admin Dashboard</em>
+    </td>
+       <td align="center">
+       <a href="https://www.flickr.com/photos/193485149@N02/51319973030/in/dateposted-public/" target="_blank" title="SignUp">
+      <img src="https://live.staticflickr.com/65535/51319973030_ce57d62583_k.jpg" alt="SignUp">
+      </a>
+      <br />
+      <em>Project Signup Form</em>
+    </td>
+       <td align="center">
+       <a href="https://www.flickr.com/photos/193485149@N02/51319689939/in/dateposted-public/" target="_blank" title="SuperAdmin">
+      <img src="https://live.staticflickr.com/65535/51319689939_82abb1ce33_k.jpg" alt="SuperAdmin">
+      </a>
+      <br />
+      <em>Project SuperAdmin Panel</em>
+    </td>
   </tr>
 </table>
 
