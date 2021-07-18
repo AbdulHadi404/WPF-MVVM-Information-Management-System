@@ -2,7 +2,7 @@
 
 ## Introduction
 
-JDCLoginUI (Front-End Only) build on C# WPF using MVVM binding and the following NuGet Packages
+JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM) binding and the following NuGet Packages
   * [MahApps.Metro](https://github.com/MahApps/MahApps.Metro).
   * [MaterialDesinThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit).
   * [LiveCharts](https://github.com/Live-Charts/Live-Charts).
