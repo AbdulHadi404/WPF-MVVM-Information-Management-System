@@ -10,7 +10,7 @@ JDCLoginUI (Front-End Only) build on C# WPF using MVVM binding and the following
 <table>
   <tr>
     <td align="center">
-      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193485149@N02/51318967251/in/dateposted-public/" title="LogIn"><img src="https://live.staticflickr.com/65535/51318967251_7250e86edb_k.jpg" alt="LogIn"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193485149@N02/51318967251/in/dateposted-public/" title="LogIn"><img src="https://live.staticflickr.com/65535/51318967251_7250e86edb_k.jpg" alt="LogIn">
       </a>
       <br />
       <em>Project Login Form</em>
