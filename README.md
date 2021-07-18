@@ -17,8 +17,8 @@ JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM
       <em>Project Login Form</em>
     </td>
    </tr>
- <tr>
-  </tr>
+  <br />
+ <br />
  <tr>
      <td align="center">
        <a href="https://www.flickr.com/photos/193485149@N02/51319973030/in/dateposted-public/" target="_blank" title="SignUp">
@@ -26,7 +26,9 @@ JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM
       </a>
       <br />
       <em>Project Signup Form</em>
-  </tr><br />
+  </tr>
+ <br />
+  <br />
  <tr>
   </td>
        <td align="center">
@@ -38,6 +40,7 @@ JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM
     </td>
     </tr>
     <br />
+     <br />
  <tr>
        <td align="center">
        <a href="https://www.flickr.com/photos/193485149@N02/51319689939/in/dateposted-public/" target="_blank" title="SuperAdmin">
