@@ -1,4 +1,4 @@
-# WPF-MVVM-Information-Management-System-JDC-
+# WPF-MVVM-Information-Management-System
 
 ## Introduction
 
