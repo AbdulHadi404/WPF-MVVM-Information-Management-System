@@ -17,7 +17,8 @@ JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM
       <em>Project Login Form</em>
     </td>
    </tr>
- <br />
+ <tr>
+  </tr>
  <tr>
      <td align="center">
        <a href="https://www.flickr.com/photos/193485149@N02/51319973030/in/dateposted-public/" target="_blank" title="SignUp">
