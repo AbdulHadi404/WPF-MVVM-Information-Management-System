@@ -1,0 +1,80 @@
+﻿<mah1:MetroContentControl
+             xmlns:mah1="http://metro.mahapps.com/winfx/xaml/controls"
+             x:Class="JDCLoginUI.ListViews.Donor_ListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JDCLoginUI.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Grid>
+        <Rectangle Margin="20,10,20,30" RadiusX="44" RadiusY="44" Fill="#FFD7DADC" Opacity="0.6"/>
+        <Grid>
+            <ScrollViewer Style="{StaticResource MaterialDesignScrollViewer}" Margin="30" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Margin="10" >
+                        <TextBlock Margin="40" Text="Donor List" FontSize="35" HorizontalAlignment="Center" Foreground="#FF002C82" OpacityMask="#FF002C82" FontWeight="SemiBold"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="TxtBox_Search_DonorList" Width="250" HorizontalContentAlignment="Center" Opacity="0.7" Foreground="#FF002C82">
+                            <materialDesign:HintAssist.Hint>
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Search"/>
+                                    <TextBlock>Search</TextBlock>
+                                </StackPanel>
+                            </materialDesign:HintAssist.Hint>
+                        </TextBox>
+                    </StackPanel>
+                    <ScrollViewer Style="{StaticResource MaterialDesignScrollViewer}" Margin="30" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Grid.Row="2" >
+                        <DataGrid ItemsSource="{Binding Items1}" CanUserSortColumns="True" CanUserAddRows="False" AutoGenerateColumns="False" HeadersVisibility="All" Name="Grid_Donor">
+                            <DataGrid.Resources>
+                                <!--BIND GRID DATA OVER HERE ~HADI <domain:BindingProxy x:Key="DataContextProxy" Data="{Binding}" xmlns:domain="clr-namespace:JDCLoginUI.Domain" /> -->
+                            </DataGrid.Resources>
+                        </DataGrid>
+                    </ScrollViewer>
+
+                    <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Donor Name" Name="TxtBox_DonorName_DonorList" Width="251" HorizontalContentAlignment="Center" Opacity="0.7" Foreground="#FF002C82"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="CNIC" Name="TxtBox_CNIC_DonorList" Width="250" HorizontalContentAlignment="Center" Opacity="0.7" Foreground="#FF002C82" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Contact No#" Name="TxtBox_Contact_DonorList" Width="250"  HorizontalContentAlignment="Center" Opacity="0.7" Foreground="#FF002C82"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical" HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Address" Name="TxtBox_Address_DonorList" Width="250" HorizontalContentAlignment="Center" Opacity="0.7" Foreground="#FF002C82"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <ComboBox Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Gender" Name="CMB_Gender_DonorList" materialDesign:HintAssist.HintOpacity=".34" HorizontalAlignment="Center" Width="150">
+                            <ComboBoxItem>Male</ComboBoxItem>
+                            <ComboBoxItem>Female</ComboBoxItem>
+                            <ComboBoxItem>Other</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="40" Grid.Row="8" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button BorderBrush="Transparent" BorderThickness="0" Margin="10" Width="124" Height="50" materialDesign:ButtonAssist.CornerRadius="25" Style="{StaticResource MaterialDesignRaisedDarkButton}" x:Name="Btn_Update_DonorList" Content="Update" FontSize="20" FontFamily="Century Gothic" Background="#FF000074" />
+                        <Button BorderBrush="Transparent" BorderThickness="0" Margin="10" Width="124" Height="50" materialDesign:ButtonAssist.CornerRadius="25" Style="{StaticResource MaterialDesignRaisedDarkButton}" x:Name="Btn_Delete_DonorList" Content="Delete" FontSize="20" FontFamily="Century Gothic" Background="#FF000074" />
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</mah1:MetroContentControl>

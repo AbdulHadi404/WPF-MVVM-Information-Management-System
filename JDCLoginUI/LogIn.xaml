@@ -1,0 +1,92 @@
+﻿<mah:MetroWindow x:Class="JDCLoginUI.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JDCLoginUI"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Height="720" Width="1280"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC8CDD1" Offset="0.029"/>
+                <GradientStop Color="#FF7DB9E4" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="360"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC8CDD1" Offset="0.029"/>
+                    <GradientStop Color="#FF7DB9E4" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid Grid.Column="2">
+                <Rectangle Margin="20,20,20,20" RadiusX="44" RadiusY="44" Fill="#FFD7DADC"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"/>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <iconPacks:PackIconMaterial Kind="Account" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="30" Margin="4,4,4,4" Foreground="#FF002C82"/>
+                        <TextBox Name="TxtBox_UName_LogIn" Width="250" mah:TextBoxHelper.Watermark="Username" HorizontalContentAlignment="Center" Height="40" Opacity="0.5" FontSize="20" BorderThickness="0" BorderBrush="Transparent"  mah:TextBoxHelper.ClearTextButton="True" FontFamily="Segoe Ui" Background="{x:Null}" Foreground="#FF002C82" CaretBrush="{x:Null}"/>
+                    </StackPanel>
+
+                    <Border Height="1" Background="#FF002C82" Opacity="0.5" Margin="96,43,52,4.6" Grid.Row="1"/>
+                    <Border Height="1" Background="#FF002C82" Opacity="0.5" Margin="96,43,52,4.6" Grid.Row="2"/>
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <iconPacks:PackIconMaterial Kind="FormTextboxPassword"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="30" Margin="4,4,4,4" Foreground="#FF002C82"/>
+                        <PasswordBox Name="TxtBox_Pass_LogIn" Width="250" HorizontalAlignment="Center" mah:TextBoxHelper.Watermark="Password" HorizontalContentAlignment="Center" Height="40" Opacity="0.5" FontSize="20" BorderThickness="0" BorderBrush="Transparent"  mah:TextBoxHelper.ClearTextButton="True" FontFamily="Segoe Ui" Background="{x:Null}" CaretBrush="{x:Null}" Margin="0,5,0,4.6" Foreground="#FF002C82" />
+                    </StackPanel>
+
+                    <Image Source="unnamed.png" Margin="86,60,65,22" />
+
+                    <Grid Grid.Row="4">
+                        <StackPanel>
+                            <Button Style="{StaticResource RoundedButtonStyle}" Margin="85,25,107,125" Name="Btn_SignIn_LoginSection" Content="Sign In" FontSize="20" Opacity="0.5" Background="#FF91BEDF" Height="45" FontFamily="Century Gothic" />
+                        </StackPanel>
+                        <StackPanel>
+                            <Button Style="{StaticResource RoundedButtonStyle}" Margin="85,81,107,68.8" Name="Btn_SignUp_LoginSection" Content="Sign Up" FontSize="20" Opacity="0.5" Background="#FF90BEDF" Height="43" FontFamily="Century Gothic"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock FontWeight="Light" FontSize="18" Text="Forgot Password ?" Foreground="Red" Opacity="0.5" Margin="116,139,106,32.8"/>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Text="JDC Welfare Organization" FontSize="35" HorizontalAlignment="Center" Foreground="#FF002C82" OpacityMask="#FF002C82" FontWeight="SemiBold" Margin="98,10,96.4,190" Grid.RowSpan="2"  />
+            <TextBlock Grid.Row="2" Width="556" TextWrapping="WrapWithOverflow" Text="JDC Foundation Pakistan is working as an independent, non-governmental, non-profit and charitable organization. It works under its own Memorandum of Articles of Association and leadership. It has no affiliation with any regional ethnic or political organization of Pakistan or anywhere in the world." FontSize="16" FontWeight="Light" HorizontalAlignment="Center" Opacity="0.7" Margin="36,30,10.4,0" Height="244" VerticalAlignment="Top" Grid.RowSpan="2" />
+
+        </Grid>
+
+    </Grid>
+
+</mah:MetroWindow>

@@ -1,0 +1,367 @@
+﻿<mah:MetroWindow x:Class="JDCLoginUI.SuperAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:JDCLoginUI"
+        xmlns:bak="clr-namespace:JDCLoginUI.BackUp"
+        xmlns:views="clr-namespace:JDCLoginUI.Views"
+        xmlns:viewmodels="clr-namespace:JDCLoginUI.ViewModels"
+        xmlns:listviewmodels="clr-namespace:JDCLoginUI.ListViewModels"
+        xmlns:views1="clr-namespace:JDCLoginUI.ListViews"
+        mc:Ignorable="d"
+        Height="720" Width="1280"
+        WindowState="Maximized">
+
+    <Window.Resources>
+        <DataTemplate x:Name="DonorViewTemplate" DataType="{x:Type viewmodels:Donor_View_Model}">
+            <views:Donor_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationViewTemplate" DataType="{x:Type viewmodels:Donation_View_Model}">
+            <views:Donation_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReceiptViewTemplate" DataType="{x:Type viewmodels:Receipt_View_Model}">
+            <views:Receipt_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="RecipientViewTemplate" DataType="{x:Type viewmodels:Recipient_View_Model}">
+            <views:Recipient_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ApplicationViewTemplate" DataType="{x:Type viewmodels:Application_View_Model}">
+            <views:Application_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="StudentViewTemplate" DataType="{x:Type viewmodels:Student_View_Model}">
+            <views:Student_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="GuardianViewTemplate" DataType="{x:Type viewmodels:Guardian_View_Model}">
+            <views:Guardian_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseViewTemplate" DataType="{x:Type viewmodels:Course_View_Model}">
+            <views:Course_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseEnrollmentViewTemplate" DataType="{x:Type viewmodels:CourseEnrollment_View_Model}">
+            <views:CourseEnrollment_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonorListViewTemplate" DataType="{x:Type listviewmodels:Donor_ListView_Model}">
+            <views1:Donor_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonoationListViewTemplate" DataType="{x:Type listviewmodels:Donation_ListView_Model}">
+            <views1:Donation_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReipientListViewTemplate" DataType="{x:Type listviewmodels:Recipient_ListView_Model}">
+            <views1:Recipient_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReceiptListViewTemplate" DataType="{x:Type listviewmodels:Receipt_ListView_Model}">
+            <views1:Receipt_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ApplicationListViewTemplate" DataType="{x:Type listviewmodels:Application_ListView_Model}">
+            <views1:Application_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="StudentListViewTemplate" DataType="{x:Type listviewmodels:Student_ListView_Model}">
+            <views1:Student_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="GuardianListViewTemplate" DataType="{x:Type listviewmodels:Guardian_ListView_Model}">
+            <views1:Guardian_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseListViewTemplate" DataType="{x:Type listviewmodels:Course_ListView_Model}">
+            <views1:Course_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseEnrollmentListViewTemplate" DataType="{x:Type listviewmodels:CourseEnrollment_ListView_Model}">
+            <views1:CourseEnrollment_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationTypeListViewTemplate" DataType="{x:Type listviewmodels:DonationType_ListView_Model}">
+            <views1:DonationType_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationTypeViewTemplate" DataType="{x:Type viewmodels:DonationType_View_Model}">
+            <views:DonationType_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationCategoryListViewTemplate" DataType="{x:Type listviewmodels:DonationCategory_ListView_Model}">
+            <views1:DonationCategory_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationCategoryViewTemplate" DataType="{x:Type viewmodels:DonationCategory_View_Model}">
+            <views:DonationCategory_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ApplicationLogListViewTemplate" DataType="{x:Type listviewmodels:Application_Log_ListView_Model}">
+            <views1:Application_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseLogListViewTemplate" DataType="{x:Type listviewmodels:Course_Log_ListView_Model}">
+            <views1:Course_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseEnrollmentLogListViewTemplate" DataType="{x:Type listviewmodels:CourseEnrollment_Log_ListView_Model}">
+            <views1:CourseEnrollment_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationLogListViewTemplate" DataType="{x:Type listviewmodels:Donation_Log_ListView_Model}">
+            <views1:Donation_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationCategoryLogListViewTemplate" DataType="{x:Type listviewmodels:DonationCategory_Log_ListView_Model}">
+            <views1:DonationCategory_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationTypeLogListViewTemplate" DataType="{x:Type listviewmodels:DonationType_Log_ListView_Model}">
+            <views1:DonationType_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonorLogListViewTemplate" DataType="{x:Type listviewmodels:Donor_Log_ListView_Model}">
+            <views1:Donor_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="GuardianLogListViewTemplate" DataType="{x:Type listviewmodels:Guardian_Log_ListView_Model}">
+            <views1:Guardian_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReceiptLogListViewTemplate" DataType="{x:Type listviewmodels:Receipt_Log_ListView_Model}">
+            <views1:Receipt_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="RecipientLogListViewTemplate" DataType="{x:Type listviewmodels:Recipient_Log_ListView_Model}">
+            <views1:Recipient_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="StudentLogListViewTemplate" DataType="{x:Type listviewmodels:Student_Log_ListView_Model}">
+            <views1:Student_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UsersLogListViewTemplate" DataType="{x:Type listviewmodels:User_Log_ListView_Model}">
+            <views1:Users_Log_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UsersListViewTemplate" DataType="{x:Type listviewmodels:Users_ListView_Model}">
+            <views1:Users_ListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationCategoryStatusViewTemplate" DataType="{x:Type viewmodels:DonationCategoryStatus_View_Model}">
+            <views:DonationCategoryStatus_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationTypeStatusViewTemplate" DataType="{x:Type viewmodels:DonationTypeStatus_View_Model}">
+            <views:DonationTypeStatus_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseStatusTemplate" DataType="{x:Type viewmodels:CourseStatus_View_Model}">
+            <views:CourseStatus_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="CourseCompletionTemplate" DataType="{x:Type viewmodels:CourseCompletion_View_Model}">
+            <views:CourseCompletion_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ApplicationsReportTemplate" DataType="{x:Type viewmodels:Applications_View_Model}">
+            <views:Applications_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="StudentsReportTemplate" DataType="{x:Type viewmodels:Students_View_Model}">
+            <views:Students_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UsersReportTemplate" DataType="{x:Type viewmodels:Users_View_Model}">
+            <views:Users_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ReceiversReportTemplate" DataType="{x:Type viewmodels:Receivers_View_Model}">
+            <views:Receivers_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="DonationsReportTemplate" DataType="{x:Type viewmodels:Donors_View_Model}">
+            <views:Donations_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ApplicationStatusTemplate" DataType="{x:Type viewmodels:Application_Status_View_Model}">
+            <views:ApplicationStatus_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UserStatusTemplate" DataType="{x:Type viewmodels:UserStatus_View_Model}">
+            <views:UserStatus_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="UserRoleTemplate" DataType="{x:Type viewmodels:UserRole_View_Model}">
+            <views:UserRole_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ImportTemplate" DataType="{x:Type bak:Import_View_Model}">
+            <bak:Import_View DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="ExportTemplate" DataType="{x:Type bak:Export_View_Model}">
+            <bak:Export_View DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC8CDD1" Offset="1"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFFCFCFC" Offset="0.796"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Image Source="unnamed.png" Opacity="0.1" Margin="20,20,20,20"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Background="#FF000074">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30">
+                <Image Source="unnamed.png" Width="160"/>
+            </StackPanel>
+            <ScrollViewer Style="{StaticResource MaterialDesignScrollViewer}" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" Grid.Row="1" Grid.Column="0">
+                <materialDesign:Card Background="Transparent" Foreground="White">
+                    <StackPanel>
+                        <Expander Style="{StaticResource MaterialDesignExpander}" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="Users" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Users" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_UsersList" Selected="Item_UsersList_Selected">Users List</ListViewItem>
+                                <ListViewItem x:Name="Item_UsersRole" Selected="Item_UsersRole_Selected">Users Role</ListViewItem>
+                                <ListViewItem x:Name="Item_UsersStatus" Selected="Item_UsersStatus_Selected">Users Status</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander Style="{StaticResource MaterialDesignExpander}" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="FileChart" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Reports" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_DonationsReport" Selected="Item_DonationsReport_Selected">Donations Reports</ListViewItem>
+                                <ListViewItem x:Name="Item_ReceiversReport" Selected="Item_ReceiversReport_Selected">Receivers Reports</ListViewItem>
+                                <ListViewItem x:Name="Item_ApplicationReport" Selected="Item_ApplicationReport_Selected">Applications Reports</ListViewItem>
+                                <ListViewItem x:Name="Item_StudentReport" Selected="Item_StudentReport_Selected">Students Reports</ListViewItem>
+                                <ListViewItem x:Name="Item_UsersReport" Selected="Item_UsersReport_Selected">Users Reports</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander Style="{StaticResource MaterialDesignExpander}" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="ContentCopy" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Logs" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_DonorListLog" Selected="Item_DonorListLog_Selected">Donor List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationListLog" Selected="Item_DonationListLog_Selected">Donation List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationTypeListLog" Selected="Item_DonationTypeListLog_Selected">Donation Type List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationCategoryListLog" Selected="Item_DonationCategoryListLog_Selected">Donation Category List</ListViewItem>
+                                <ListViewItem x:Name="Item_ReceiptListLog" Selected="Item_ReceiptListLog_Selected">Receipt List</ListViewItem>
+                                <ListViewItem x:Name="Item_RecipientListLog" Selected="Item_RecipientListLog_Selected">Recipient List</ListViewItem>
+                                <ListViewItem x:Name="Item_ApplicationListLog" Selected="Item_ApplicationListLog_Selected">Application List</ListViewItem>
+                                <ListViewItem x:Name="Item_StudentListLog" Selected="Item_StudentListLog_Selected">Student List</ListViewItem>
+                                <ListViewItem x:Name="Item_GuardianListLog" Selected="Item_GuardianListLog_Selected">Guardian List</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseListLog" Selected="Item_CourseListLog_Selected">Course List</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseEnrollmentListLog" Selected="Item_CourseEnrollmentListLog_Selected">Course Enrollment List</ListViewItem>
+                                <ListViewItem x:Name="Item_UsersListLog" Selected="Item_UsersListLog_Selected">Users List</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander Style="{StaticResource MaterialDesignExpander}" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="Donate" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Donor" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddDonor" Selected="Item_AddDonor_Selected" >Add Donor</ListViewItem>
+                                <ListViewItem x:Name="Item_AddDonation" Selected="Item_AddDonation_Selected">Add Donation</ListViewItem>
+                                <ListViewItem x:Name="Item_DonorList" Selected="Item_DonorList_Selected">Donor List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationList" Selected="Item_DonationList_Selected">Donation List</ListViewItem>
+                                <ListViewItem x:Name="Item_AddDonationType" Selected="Item_AddDonationType_Selected" >Add Donation Type</ListViewItem>
+                                <ListViewItem x:Name="Item_AddDonationCategory" Selected="Item_AddDonationCategory_Selected">Add Donation Category</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationTypeList" Selected="Item_DonationTypeList_Selected" >Donation Type List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationCategoryList" Selected="Item_DonationCategoryList_Selected">Donation Category List</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationTypeStatus" Selected="Item_DonationTypeStatus_Selected">Donation Type Status</ListViewItem>
+                                <ListViewItem x:Name="Item_DonationCategoryStatus" Selected="Item_DonationCategoryStatus_Selected">Donation Category Status</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander Style="{StaticResource MaterialDesignExpander}" HorizontalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="HandHeart" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Receiver" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddRecipient" Selected="Item_AddRecipient_Selected">Add Recipient</ListViewItem>
+                                <ListViewItem x:Name="Item_AddReceipt" Selected="Item_AddReceipt_Selected">Add Receipt</ListViewItem>
+                                <ListViewItem x:Name="Item_RecipientList" Selected="Item_RecipientList_Selected">Recipient List</ListViewItem>
+                                <ListViewItem x:Name="Item_ReceiptList" Selected="Item_ReceiptList_Selected">Recipt List</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignExpander}" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="Paper" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Applications" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddApplication" Selected="Item_AddApplication_Selected">Add Application</ListViewItem>
+                                <ListViewItem x:Name="Item_ApplicationList" Selected="Item_ApplicationList_Selected">Application List</ListViewItem>
+                                <ListViewItem x:Name="Item_ApplicationTypeStatus" Selected="Item_ApplicationTypeStatus_Selected">Application Type Status</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignExpander}" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="School" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Student" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddStudent" Selected="Item_AddStudent_Selected">Add Student</ListViewItem>
+                                <ListViewItem x:Name="Item_StudentList" Selected="Item_StudentList_Selected">Student List</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignExpander}" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="UserChildCircle" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Guardian" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddGuardian" Selected="Item_AddGuardian_Selected">Add Guardian</ListViewItem>
+                                <ListViewItem x:Name="Item_GuardianList" Selected="Item_GuardianList_Selected">Guardian List</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignExpander}" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="Book" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Course" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_AddCourse" Selected="Item_AddCourse_Selected">Add Course</ListViewItem>
+                                <ListViewItem x:Name="Item_AddCourseEnrollment" Selected="Item_AddCourseEnrollment_Selected">Add Course Enrollment</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseList" Selected="Item_CourseList_Selected">Course List</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseEnrollmentList" Selected="Item_CourseEnrollmentList_Selected">Course Enrollment List</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseCompletion" Selected="Item_CourseCompletion_Selected">Course Completion</ListViewItem>
+                                <ListViewItem x:Name="Item_CourseStatus" Selected="Item_CourseStatus_Selected">Course Status</ListViewItem>
+                            </ListView>
+                        </Expander>
+                        <Border Background="{DynamicResource MaterialDesignDivider}" Height="4" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+                        <Expander HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignExpander}" BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                            <Expander.Header>
+                                <Grid Width="150">
+                                    <materialDesign:PackIcon Kind="Backup" Height="40" Width="40" HorizontalAlignment="Left"/>
+                                    <TextBlock FontSize="18" Text="Backup" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="100"/>
+                                </Grid>
+                            </Expander.Header>
+                            <ListView Style="{StaticResource MaterialDesignListView}" FontSize="14" HorizontalContentAlignment="Center" Foreground="White">
+                                <ListViewItem x:Name="Item_Export" Selected="Item_Export_Selected">Export Backup</ListViewItem>
+                                <ListViewItem x:Name="Item_Impport" Selected="Item_Import_Selected">Import Backup</ListViewItem>
+                            </ListView>
+                        </Expander>
+                    </StackPanel>
+                </materialDesign:Card>
+            </ScrollViewer>
+        </Grid>
+        <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding}"/>
+        <Button BorderBrush="Transparent" VerticalAlignment="Top" BorderThickness="0" Height="25" Style="{StaticResource MaterialDesignFlatButton}" x:Name="Btn_LogOut_SAdmin" FontSize="20" FontFamily="Century Gothic" Background="#FF000074" Foreground="#DDE02F2F">
+            <Grid Width="190">
+                <materialDesign:PackIcon Kind="Logout" Height="18" Width="110" HorizontalAlignment="Left"/>
+                <TextBlock FontSize="14" Text="Log Out" HorizontalAlignment="Right" VerticalAlignment="Center" Width ="120" Foreground="#DDFF0606"/>
+            </Grid>
+        </Button>
+    </Grid>
+</mah:MetroWindow>
