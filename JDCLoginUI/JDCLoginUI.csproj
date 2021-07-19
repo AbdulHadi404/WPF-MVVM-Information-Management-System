@@ -11,7 +11,7 @@
 	  <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
 	  <PackageReference Include="MahApps.Metro" Version="2.4.7" />
 	  <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
-	  <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+	  <PackageReference Include="MaterialDesignThemes" Version="4.2.0-ci2657" />
 	  <PackageReference Include="Syncfusion.UI.WPF.NET" Version="19.2.0.47" />
 	</ItemGroup>
 
