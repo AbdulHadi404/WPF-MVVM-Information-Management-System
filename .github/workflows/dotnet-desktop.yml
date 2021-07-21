@@ -11,7 +11,7 @@ jobs:
         configuration: [Debug, Release]
     runs-on: windows-latest # For a list of available runner types, refer to
     env:
-      Solution_Name: ../../../JDCLoginUI.sln # Replace with your solution name, i.e. MyWpfApp.sln.
+      Solution_Name: "/JDCLoginUI.sln" # Replace with your solution name, i.e. MyWpfApp.sln.
       DOTNET_CLI_TELEMETRY_OPTOUT: 1 # TODO for what?
     steps:
       - name: Checkout
@@ -21,7 +21,7 @@ jobs:
 
       # Demo to test Github actions
       - name: TBR(to be removed)
-        run: Echo "Hello world!!!!"
+        run: dir
 
       # Install the .NET Core workload
       - name: Install .NET5.0 (version 5.0.x)
