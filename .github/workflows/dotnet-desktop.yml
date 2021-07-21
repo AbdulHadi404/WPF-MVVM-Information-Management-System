@@ -18,6 +18,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
+      # Demo to test Github actions
+      - name: TBR(to be removed)
+        run: Echo "Hello world!!!!"
+
       # Install the .NET Core workload
       - name: Install .NET5.0 (version 5.0.x)
         uses: actions/setup-dotnet@v1
