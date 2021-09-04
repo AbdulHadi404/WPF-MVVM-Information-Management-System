@@ -1,0 +1,35 @@
+name: New .NET Desktop
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+    runs-on: windows-latest # For a list of available runner types, refer to
+    env:
+      Solution_Name: "/src/JDCLoginUI.sln" # Replace with your solution name, i.e. MyWpfApp.sln.
+      Test_Project_Path: your-test-project-path # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      Wap_Project_Directory: your-wap-project-directory-name # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
+      Wap_Project_Path: your-wap-project-path # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Demo to test Github actions
+      - name: TBR(to be removed)
+        run: dir
+
+      # Install the .NET Core workload
+      - name: Install .NET5.0 (version 5.0.x)
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      # BUILD ALL in the solution
+      - name: Execute unit tests
+        run: dotnet build
