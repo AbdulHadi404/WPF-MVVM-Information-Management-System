@@ -1,5 +1,5 @@
 # WPF-MVVM-Information-Management-System
-[![Build](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml/badge.svg?branch=main)](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml)  ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAbdulHadi404%2FWPF-MVVM-Information-Management-System&labelColor=%23d9e3f0&countColor=%232ccce4&style=flat)   ![Contribution](https://img.shields.io/badge/Contributions-Welcome-success)
+[![Build](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml/badge.svg?branch=main)](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml)  ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAbdulHadi404%2FWPF-MVVM-Information-Management-System&labelColor=%23d9e3f0&countColor=%232ccce4&style=flat)  ![Contribution](https://img.shields.io/badge/Contributions-welcome-orange)
 
 
 ## Introduction
