@@ -1,5 +1,5 @@
 # WPF-MVVM-Information-Management-System
-
+[![Build](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml/badge.svg?branch=main)](https://github.com/AbdulHadi404/WPF-MVVM-Information-Management-System/actions/workflows/MSBuild.yml)
 ## Introduction
 
 JDCLoginUI (Front-End Only) build on C# WPF using Model–view–viewmodel (MVVM) binding and the following NuGet Packages
